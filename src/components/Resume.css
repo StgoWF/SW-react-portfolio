@@ -1,0 +1,26 @@
+/* src/components/Resume.css */
+.resume {
+    padding: 20px;
+  }
+  
+  .resume-link {
+    display: block;
+    margin-bottom: 20px;
+    color: #683e84;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .resume-link:hover {
+    text-decoration: underline;
+  }
+  
+  .proficiencies ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .proficiencies li {
+    margin-bottom: 10px;
+  }
+  

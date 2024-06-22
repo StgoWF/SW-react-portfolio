@@ -1,0 +1,11 @@
+/* src/components/Portfolio.css */
+.portfolio {
+    padding: 20px;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
