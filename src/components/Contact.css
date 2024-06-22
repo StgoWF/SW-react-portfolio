@@ -3,6 +3,10 @@
     padding: 20px;
     flex-direction: column;
   }
+  .contact h2 {
+    font-size: 2.5rem;
+
+  }
   
   .form-group {
     margin-bottom: 15px;
