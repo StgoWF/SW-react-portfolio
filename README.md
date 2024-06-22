@@ -6,13 +6,13 @@ This is a portfolio website built with React to showcase my projects and skills 
 
 ## Screenshot
 
-![Portfolio Screenshot](./path_to_screenshot.png)
+![Portfolio Screenshot](./public/assets/images/image.png)
 
 ## Deployed Application
 
 You can view the deployed application at the following link:
 
-[Deployed Portfolio](https://your-netlify-deployed-site.netlify.app)
+[Deployed Portfolio](https://santiago-weinstein-portfolio.netlify.app/)
 
 ## Sections
 
