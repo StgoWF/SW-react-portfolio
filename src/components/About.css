@@ -1,18 +1,60 @@
-/* src/components/About.css */
 .about {
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centrar el texto */
   }
   
-  .profile-image {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
+  .about-image {
+    width: 273px;
+    height: 273px; /* Hacer la imagen cuadrada */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%; /* Hacer la imagen redonda */
+    margin: 20px 0; /* Espacio entre la imagen y otros elementos */
   }
   
-  .bio {
-    max-width: 600px;
+  .about-title {
+    color: #030303;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 20px; /* Espacio debajo del título */
+  }
+  
+  .about-description {
+    color: #030303;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin: 20px 0; /* Espacio arriba y abajo del texto */
+  }
+  
+  .about-button {
+    display: inline-block;
+    cursor: pointer;
+    width: 136px;
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    background-color: #683e84;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin-top: 20px; /* Espacio arriba del botón */
+  }
+  
+  .about-button:hover {
+    background-color: #5a2e72;
   }
   
