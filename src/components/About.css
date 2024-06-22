@@ -5,12 +5,13 @@
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center; /* Centrar el texto */
+    text-align: center; 
+    overflow-y: auto;
   }
   
   .about-image {
     width: 173px;
-    height: 173px; /* Hacer la imagen cuadrada */
+    height: 173px; 
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,7 +24,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 28px;
-    margin-bottom: 20px; /* Espacio debajo del título */
+    margin-bottom: 20px;
   }
   
   .about-description {
@@ -31,7 +32,7 @@
     font-size: 1.1rem;
     font-weight: 400;
     line-height: 19px;
-    margin: 20px 8px; /* Espacio arriba y abajo del texto */
+    margin: 20px 8px; 
   }
   
   .about-button {
@@ -51,7 +52,7 @@
     text-align: center;
     text-decoration: none;
     transition: background-color 0.2s;
-    margin-top: 20px; /* Espacio arriba del botón */
+    margin-top: 20px; 
   }
   
   .about-button:hover {
