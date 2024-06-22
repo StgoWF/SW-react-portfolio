@@ -1,44 +1,62 @@
+/* src/components/Resume.css */
 .resume {
-    padding: 40px;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+    overflow-y: auto;
+    margin:10px;
+  }
+  
+  .resume-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     text-align: center;
   }
   
-  .resume h2 {
+  .proficiencies-container {
+    display: flex;
+    justify-content: space-around;
     margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #333;
-  }
-  
-  .resume-link {
-    display: block;
-    margin-bottom: 20px;
-    color: #683e84;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .resume-link:hover {
-    text-decoration: underline;
+    align-items: flex-start;
   }
   
   .proficiencies {
-    margin-top: 20px;
+    width: 40%;
+    text-align: center;
   }
   
   .proficiencies h3 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    font-size: 2rem;
-    color: #333;
   }
   
   .proficiencies ul {
     list-style: none;
     padding: 0;
+    font-size: 1.2rem;
   }
   
   .proficiencies li {
     margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: #555;
+  }
+  
+  .resume-link-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .resume-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #683e84;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    margin-bottom: 10px;
+  }
+  
+  .resume-link:hover {
+    background-color: #5a2e72;
   }
   

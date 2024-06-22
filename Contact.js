@@ -1,5 +1,6 @@
 // src/components/Contact.js
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './Contact.css';
 
 const Contact = () => {
@@ -10,6 +11,7 @@ const Contact = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,13 +39,27 @@ const Contact = () => {
 
     if (Object.keys(formErrors).length === 0) {
       // Form is valid, handle form submission
-      alert('Form submitted!');
+      emailjs.send('REDACTED', 'REDACTED', form, 'REDACTED')
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setStatus('SUCCESS');
+          setForm({
+            name: '',
+            email: '',
+            message: '',
+          });
+        }, (err) => {
+          console.error('FAILED...', err);
+          setStatus('FAILED');
+        });
     }
   };
 
   return (
     <section className="contact">
       <h2>Contact</h2>
+      {status === 'SUCCESS' && <p className="success">Thanks for your message!</p>}
+      {status === 'FAILED' && <p className="error">Oops! Something went wrong. Please try again.</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>

@@ -1,13 +1,51 @@
 /* src/components/Project.css */
 .project-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-  }
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  width: 300px;
+  margin: 20px;
   
-  .project-info {
-    padding: 10px;
-  }
-  
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+.project-card img {
+  width: 248px;
+  height: 100px;
+}
+
+.project-info {
+  padding: 16px;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.project-info p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.project-info a {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 0;
+  background-color: #683e84;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.project-info a:hover {
+  background-color: #5a2e72;
+}
+
+

@@ -9,18 +9,18 @@
   }
   
   .about-image {
-    width: 273px;
-    height: 273px; /* Hacer la imagen cuadrada */
+    width: 173px;
+    height: 173px; /* Hacer la imagen cuadrada */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 50%; /* Hacer la imagen redonda */
-    margin: 20px 0; /* Espacio entre la imagen y otros elementos */
+    border-radius: 50%; 
+    margin: 20px 0; 
   }
   
   .about-title {
     color: #030303;
-    font-size: 24px;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 28px;
     margin-bottom: 20px; /* Espacio debajo del título */
@@ -28,10 +28,10 @@
   
   .about-description {
     color: #030303;
-    font-size: 16px;
+    font-size: 1.1rem;
     font-weight: 400;
     line-height: 19px;
-    margin: 20px 0; /* Espacio arriba y abajo del texto */
+    margin: 20px 8px; /* Espacio arriba y abajo del texto */
   }
   
   .about-button {

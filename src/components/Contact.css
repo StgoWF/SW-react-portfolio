@@ -1,6 +1,7 @@
 /* src/components/Contact.css */
 .contact {
     padding: 20px;
+    flex-direction: column;
   }
   
   .form-group {
