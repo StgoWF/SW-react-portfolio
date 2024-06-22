@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useTransition, animated } from 'react-spring';
 import Header from './components/Header';
 import About from './components/About';
@@ -23,6 +23,7 @@ const App = () => {
 };
 
 const Main = () => {
+  const location = useLocation();
   const transitions = useTransition(location, {
     from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
     enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
@@ -31,12 +32,12 @@ const Main = () => {
 
   return transitions((props, item) => (
     <animated.div style={props} className="main-content">
-      <Switch location={item}>
-        <Route exact path="/" component={About} />
-        <Route path="/portfolio" component={Portfolio} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/resume" component={Resume} />
-      </Switch>
+      <Routes location={item}>
+        <Route exact path="/" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
     </animated.div>
   ));
 };
