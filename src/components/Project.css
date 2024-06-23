@@ -1,4 +1,3 @@
-/* src/components/Project.css */
 .project-card {
   border: 1px solid #f0f0f0;
   border-radius: 8px;
@@ -7,12 +6,13 @@
   transition: transform 0.2s;
   width: 300px;
   margin: 20px;
-  
+  position: relative;
 }
 
 .project-card:hover {
   transform: scale(1.05);
 }
+
 .project-card img {
   width: 248px;
   height: 200px;
@@ -48,4 +48,72 @@
   background-color: #5a2e72;
 }
 
+.info-icon {
+  font-size: 1.5rem;
+  color: #683e84;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
+.info-icon:hover {
+  color: #5a2e72;
+}
+
+/* Add styles for the modal */
+.inline-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 10;
+  max-width: 300px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inline-modal h2 {
+  margin-top: 0;
+}
+
+.inline-modal p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.inline-modal a {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 0;
+  background-color: #683e84;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.inline-modal a:hover {
+  background-color: #5a2e72;
+}
+
+.inline-modal .close-button {
+  background: #683e84;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.inline-modal .close-button:hover {
+  background: #572a6e;
+}
+
+.inline-modal a + a {
+  margin-top: 10px; /* Add space between buttons */
+}
