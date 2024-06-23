@@ -5,18 +5,25 @@ import './Portfolio.css';
 
 const projects = [
   {
-    image: './assets/images/Proyect1.png',
-    title: 'MiniProject',
+    image: './assets/images/Portfolio.png',
+    title: 'Portfolio',
     tech: 'HTML, CSS',
-    link: 'https://stgowf.github.io/mini1/',
-    repo: 'https://github.com/StgoWF/mini1',
+    link: 'https://stgowf.github.io/Portafolio/',
+    repo: 'https://github.com/StgoWF/SWPortfolio',
   },
   {
-    image: '../assets/images/Proyect2.png',
-    title: 'Prework Study Guide',
+    image: './assets/images/JspasswordGenerator.png',
+    title: 'JavaScrip Password Generator',
+    tech: 'JavaScript',
+    link: 'https://stgowf.github.io/JSPasswordGenerator/',
+    repo: 'https://github.com/StgoWF/JSPasswordGenerator',
+  },
+  {
+    image: '../assets/images/Workdayscheduler.png',
+    title: 'Work Day Scheduler',
     tech: 'HTML, CSS, JavaScript',
-    link: 'https://stgowf.github.io/prework-study-guide/',
-    repo: 'https://github.com/StgoWF/prework-study-guide',
+    link: 'https://stgowf.github.io/WorkDayScheduler/',
+    repo: 'https://github.com/StgoWF/WorkDayScheduler',
   },
   {
     image: '../assets/images/TailorMyTrip.png',
