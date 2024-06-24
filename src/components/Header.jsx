@@ -3,11 +3,11 @@ import React from 'react';
 import Navigation from './Navigation';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ toggleContactModal }) => {
   return (
     <header className="header">
       <h1>Welcome to Santiago Weinstein's Portfolio</h1>
-      <Navigation />
+      <Navigation toggleContactModal={toggleContactModal} />
     </header>
   );
 };

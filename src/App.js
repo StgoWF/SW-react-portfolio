@@ -1,24 +1,31 @@
-// src/App.js
-import React from 'react';
+// src/App.jsx
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useTransition, animated } from 'react-spring';
-import Header from './components/Header';
-import About from './components/About';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
-import Resume from './components/Resume';
-import Footer from './components/Footer';
+import Header from './components/Header.jsx';
+import About from './components/About.jsx';
+import Portfolio from './components/Portfolio.jsx';
+import Resume from './components/Resume.jsx';
+import Footer from './components/Footer.jsx';
+import ContactModal from './components/ContactModal.jsx';
 import './App.css';
 
 const App = () => {
+  const [isContactModalOpen, setContactModalOpen] = useState(false);
+
+  const toggleContactModal = () => {
+    setContactModalOpen(!isContactModalOpen);
+  };
+
   return (
     <Router>
       <div className="app-container">
-        <Header />
+        <Header toggleContactModal={toggleContactModal} />
         <div className="content-container">
           <Main />
           <Footer />
         </div>
+        <ContactModal isOpen={isContactModalOpen} onClose={toggleContactModal} />
       </div>
     </Router>
   );
@@ -35,9 +42,8 @@ const Main = () => {
   return transitions((props, item) => (
     <animated.div style={props} className="main-content">
       <Routes location={item}>
-        <Route exact path="/" element={<About />} />
+        <Route path="/" element={<About />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/resume" element={<Resume />} />
       </Routes>
     </animated.div>
