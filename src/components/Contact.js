@@ -1,4 +1,3 @@
-// src/components/Contact.js
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import './Contact.css';
@@ -12,6 +11,8 @@ const Contact = () => {
 
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,8 +40,13 @@ const Contact = () => {
 
     if (Object.keys(formErrors).length === 0) {
       // Form is valid, handle form submission
-      emailjs.send('REDACTED', 'REDACTED', form, 'REDACTED')
-        .then((response) => {
+      emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      ).then(
+        (response) => {
           console.log('SUCCESS!', response.status, response.text);
           setStatus('SUCCESS');
           setForm({
@@ -48,18 +54,34 @@ const Contact = () => {
             email: '',
             message: '',
           });
-        }, (err) => {
+          setModalMessage('Thanks for your message!');
+          setShowModal(true);
+        },
+        (err) => {
           console.error('FAILED...', err);
           setStatus('FAILED');
-        });
+          setModalMessage('Oops! Something went wrong. Please try again.');
+          setShowModal(true);
+        }
+      );
     }
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
     <section className="contact">
       <h2>Contact</h2>
-      {status === 'SUCCESS' && <p className="success">Thanks for your message!</p>}
-      {status === 'FAILED' && <p className="error">Oops! Something went wrong. Please try again.</p>}
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <p>{modalMessage}</p>
+            <button onClick={closeModal}>Close</button>
+          </div>
+        </div>
+      )}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name</label>
