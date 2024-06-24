@@ -10,7 +10,6 @@ const Contact = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
 
@@ -48,7 +47,6 @@ const Contact = () => {
       ).then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
-          setStatus('SUCCESS');
           setForm({
             name: '',
             email: '',
@@ -59,7 +57,6 @@ const Contact = () => {
         },
         (err) => {
           console.error('FAILED...', err);
-          setStatus('FAILED');
           setModalMessage('Oops! Something went wrong. Please try again.');
           setShowModal(true);
         }

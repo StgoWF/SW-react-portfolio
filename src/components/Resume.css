@@ -1,62 +1,68 @@
 /* src/components/Resume.css */
 .resume {
-    padding: 20px;
-    text-align: center;
-    flex-direction: column;
-    overflow-y: auto;
-    margin:10px;
-  }
-  
-  .resume-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .proficiencies-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-    align-items: flex-start;
-  }
-  
-  .proficiencies {
-    width: 40%;
-    text-align: center;
-  }
-  
-  .proficiencies h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .proficiencies ul {
-    list-style: none;
-    padding: 0;
-    font-size: 1.2rem;
-  }
-  
-  .proficiencies li {
-    margin-bottom: 10px;
-  }
-  
-  .resume-link-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .resume-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #683e84;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    margin-bottom: 10px;
-  }
-  
-  .resume-link:hover {
-    background-color: #5a2e72;
-  }
-  
+  padding: 20px;
+  text-align: center;
+  flex-direction: column;
+  overflow-y: auto;
+  margin: 10px;
+}
+
+.resume-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.proficiencies-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.proficiencies {
+  width: 40%;
+  text-align: center;
+}
+
+.proficiencies h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.proficiencies ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.proficiencies li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.proficiencies li svg {
+  margin-right: 5px; /* Espacio entre el ícono y el texto */
+}
+
+.resume-link-container {
+  display: flex;
+  justify-content: center;
+}
+
+.resume-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #683e84;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  margin-bottom: 10px;
+}
+
+.resume-link:hover {
+  background-color: #5a2e72;
+}
