@@ -25,7 +25,7 @@ const Project = ({ image, title, tech, link, repo, description }) => {
           <p>{description}</p>
           <a href={link} target="_blank" rel="noopener noreferrer" className="project-button">View Project</a>
           <a href={repo} target="_blank" rel="noopener noreferrer" className="project-button">GitHub Repo</a>
-          <button onClick={toggleModal} className="close-button">Close</button>
+          <button onClick={toggleModal} className="close-button">X</button>
         </div>
       )}
     </div>

@@ -1,4 +1,3 @@
-// src/components/ContactModal.jsx
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import './ContactModal.css';
@@ -62,7 +61,7 @@ const ContactModal = ({ isOpen, onClose }) => {
   };
 
   return isOpen ? (
-    <div className="modal-overlay">
+    <div className="modal-overlay" id="contact">
       <div className="modal-content">
         <button onClick={onClose} className="close-button">X</button>
         <h2>Contact</h2>

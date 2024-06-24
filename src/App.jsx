@@ -1,4 +1,3 @@
-// src/App.jsx
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useTransition, animated } from 'react-spring';
@@ -8,13 +7,19 @@ import Portfolio from './components/Portfolio.jsx';
 import Resume from './components/Resume.jsx';
 import Footer from './components/Footer.jsx';
 import ContactModal from './components/ContactModal.jsx';
+import MobileMenu from './components/MobileMenu.jsx';
 import './App.css';
 
 const App = () => {
   const [isContactModalOpen, setContactModalOpen] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleContactModal = () => {
     setContactModalOpen(!isContactModalOpen);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -26,6 +31,7 @@ const App = () => {
           <Footer />
         </div>
         <ContactModal isOpen={isContactModalOpen} onClose={toggleContactModal} />
+        <MobileMenu isOpen={isMobileMenuOpen} toggleMenu={toggleMobileMenu} toggleContactModal={toggleContactModal} />
       </div>
     </Router>
   );

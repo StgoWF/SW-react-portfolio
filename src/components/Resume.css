@@ -3,15 +3,9 @@
   padding: 20px;
   text-align: center;
   flex-direction: column;
-  overflow-y: auto;
   margin: 10px;
 }
 
-.resume-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
 
 .proficiencies-container {
   display: flex;
@@ -69,12 +63,6 @@
 
 .resume-title {
   font-size: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
 
-}
-@media (max-width: 768px) {
-  .resume-title {
-    margin-top: 200px; 
-  }
+
 }
