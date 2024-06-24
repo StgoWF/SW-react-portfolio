@@ -17,7 +17,7 @@ const Project = ({ image, title, tech, link, repo, description }) => {
         <p>{tech}</p>
         <a href={link} target="_blank" rel="noopener noreferrer" className="project-button">View Project</a>
         <a href={repo} target="_blank" rel="noopener noreferrer" className="project-button">GitHub Repo</a>
-        <FaInfoCircle onClick={toggleModal} className="info-icon" /> {/* Icon for More Info */}
+        {!showModal && <FaInfoCircle onClick={toggleModal} className="info-icon" />} {/* Icon for More Info */}
       </div>
       {showModal && (
         <div className="inline-modal">

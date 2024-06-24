@@ -74,6 +74,7 @@
   max-width: 300px;
   width: 100%;
   box-sizing: border-box;
+  max-height: 56vh
 }
 
 .inline-modal h2 {
@@ -102,17 +103,20 @@
 }
 
 .inline-modal .close-button {
-  background: #683e84;
-  color: white;
+
+  color: #8c8787;
   border: none;
   padding: 10px;
   cursor: pointer;
   border-radius: 4px;
   margin-top: 10px;
+  position: unset;
 }
 
 .inline-modal .close-button:hover {
-  background: #572a6e;
+  background: #683e84;
+  color: #f0f0f0;
+
 }
 
 .inline-modal a + a {

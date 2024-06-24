@@ -1,13 +1,11 @@
 /* src/components/Portfolio.css */
 .portfolio {
-  padding: 40px 20px;
   text-align: center;
   flex-direction: column;
 }
 
 .portfolio h2 {
   margin-bottom: 20px;
-  font-size: 2rem;
   color: #333;
   text-align: center;
 

@@ -27,7 +27,7 @@ const Navigation = ({ toggleContactModal }) => {
         <li><NavLink to="/resume" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setMenuOpen(false)}>Resume</NavLink></li>
         <li><a href="/" className="contact-link" onClick={handleContactClick}>Contact</a></li>
       </ul>
-      <MobileMenu isOpen={isMenuOpen} toggleMenu={handleMenuClick} toggleContactModal={toggleContactModal} />
+      <MobileMenu isOpen={isMenuOpen} toggleMenu={handleMenuClick} toggleContactModal={handleContactClick} />
     </nav>
   );
 };

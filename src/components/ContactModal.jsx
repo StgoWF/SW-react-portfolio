@@ -61,7 +61,7 @@ const ContactModal = ({ isOpen, onClose }) => {
   };
 
   return isOpen ? (
-    <div className="modal-overlay" id="contact">
+    <div className="modal-overlay">
       <div className="modal-content">
         <button onClick={onClose} className="close-button">X</button>
         <h2>Contact</h2>
@@ -74,6 +74,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               name="name"
               value={form.name}
               onChange={handleChange}
+              placeholder="John Doe"
             />
             {errors.name && <p className="error">{errors.name}</p>}
           </div>
@@ -85,6 +86,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               name="email"
               value={form.email}
               onChange={handleChange}
+              placeholder="email@example.com"
             />
             {errors.email && <p className="error">{errors.email}</p>}
           </div>
@@ -95,6 +97,7 @@ const ContactModal = ({ isOpen, onClose }) => {
               name="message"
               value={form.message}
               onChange={handleChange}
+              placeholder="Enter your message here"
             />
             {errors.message && <p className="error">{errors.message}</p>}
           </div>
