@@ -1,61 +1,85 @@
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.about-image {
+  width: 173px;
+  height: 173px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.about-title {
+  color: #030303;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  color: #030303;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 19px;
+  margin: 20px 8px;
+}
+
+.about-button {
+  display: inline-block;
+  cursor: pointer;
+  width: 136px;
+  height: 40px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2px;
+  background-color: #683e84;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 400;
+  line-height: 19px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  margin-top: 20px;
+}
+
+.about-button:hover {
+  background-color: #5a2e72;
+}
+
+@media (max-width: 768px) {
+  .about {
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center; 
-    overflow-y: auto;
   }
-  
+
   .about-image {
-    width: 173px;
-    height: 173px; 
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%; 
-    margin: 20px 0; 
+
+    background-size: contain; 
   }
-  
+
   .about-title {
-    color: #030303;
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 28px;
-    margin-bottom: 20px;
+    font-size: 2rem;
   }
-  
+
   .about-description {
-    color: #030303;
-    font-size: 1.1rem;
-    font-weight: 400;
-    line-height: 19px;
-    margin: 20px 8px; 
+    font-size: 1rem;
+    margin: 10px;
   }
-  
+
   .about-button {
-    display: inline-block;
-    cursor: pointer;
-    width: 136px;
-    height: 40px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 2px;
-    background-color: #683e84;
-    color: #ffffff;
-    font-size: 16px;
-    font-family: "Poppins";
-    font-weight: 400;
-    line-height: 19px;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.2s;
-    margin-top: 20px; 
+    width: 120px;
+    font-size: 14px;
   }
-  
-  .about-button:hover {
-    background-color: #5a2e72;
-  }
-  
+}

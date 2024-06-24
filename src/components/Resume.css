@@ -66,3 +66,15 @@
 .resume-link:hover {
   background-color: #5a2e72;
 }
+
+.resume-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+@media (max-width: 768px) {
+  .resume-title {
+    margin-top: 200px; 
+  }
+}
