@@ -13,10 +13,12 @@ import './App.css';
 const App = () => {
   return (
     <Router>
-      <div className="app">
+      <div className="app-container">
         <Header />
-        <Main />
-        <Footer />
+        <div className="content-container">
+          <Main />
+          <Footer />
+        </div>
       </div>
     </Router>
   );
