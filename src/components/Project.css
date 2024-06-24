@@ -7,6 +7,7 @@
   width: 300px;
   margin: 20px;
   position: relative;
+  overflow-y: auto;
 }
 
 .project-card:hover {
