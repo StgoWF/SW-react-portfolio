@@ -9,7 +9,6 @@ const MobileMenu = ({ isOpen, toggleMenu, toggleContactModal }) => {
     isOpen && (
       <div className="mobile-menu-overlay">
         <div className="mobile-menu-content">
-          <button className="close-button" onClick={toggleMenu}>X</button>
           <nav className="mobile-navigation">
             <ul>
 

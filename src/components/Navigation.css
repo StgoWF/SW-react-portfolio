@@ -7,8 +7,49 @@
 
 .menu-icon {
   display: none;
-  font-size: 24px;
+  width: 30px;
+  height: 24px;
+  position: relative;
   cursor: pointer;
+  z-index: 1001; /* para asegurarse de que esté por encima del menú */
+}
+
+.menu-icon span,
+.menu-icon::before,
+.menu-icon::after {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 71%;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.menu-icon span {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-icon::before {
+  content: '';
+  top: 0;
+}
+
+.menu-icon::after {
+  content: '';
+  bottom: 0;
+}
+
+.menu-icon.open span {
+  background: transparent;
+}
+
+.menu-icon.open::before {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.menu-icon.open::after {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 .nav-links {
@@ -29,6 +70,7 @@
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
 }
+
 .nav-links a:hover {
   background-color: #ffffff;
 }
@@ -37,7 +79,6 @@
   color: #683e84;
   font-weight: bold;
   background-color: #ffffff;
-
 }
 
 .nav-links a.contact-link {
@@ -52,21 +93,24 @@
 }
 
 @media (max-width: 768px) {
-  .navigation{
+  .navigation {
     margin-left: auto;
   }
   .menu-icon {
     display: block;
+    scale: 142%;
+    margin: 11px;
   }
   .nav-links {
     display: none;
     flex-direction: column;
-    width: 110%;
+    width: 100%;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
-    top: 50px;
+    top: 10px;
     left: 0;
+    height: 153px;
   }
   .nav-links.open {
     display: flex;
@@ -77,10 +121,21 @@
     padding: 15px 0;
     border-radius: 0;
   }
+  .nav-links a.active {
+    color: #683e84;
+    font-weight: bold;
+    background-color: unset;
+  }
   .nav-links a.contact-link {
-    background-color: #532e69; /* Different background color */
+    background-color: unset; /* Different background color */
+    color: #0056b3;
   }
   .nav-links a.contact-link:hover {
-    background-color: #683e84;
+    background-color: #043160;
+  }
+  nav-links a.active {
+    color: #683e84;
+    font-weight: bold; 
+    background-color: #ffffff;
   }
 }

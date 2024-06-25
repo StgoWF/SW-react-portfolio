@@ -1,3 +1,4 @@
+// src/components/Navigation.jsx
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import MobileMenu from './MobileMenu';
@@ -18,8 +19,8 @@ const Navigation = ({ toggleContactModal }) => {
 
   return (
     <nav className="navigation">
-      <div className="menu-icon" onClick={handleMenuClick}>
-        ☰
+      <div className={`menu-icon ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuClick}>
+        <span></span>
       </div>
       <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <li><NavLink end to="/" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setMenuOpen(false)}>About Me</NavLink></li>
