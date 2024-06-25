@@ -20,7 +20,7 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
-  height: 139px;
+  height: 154px;
 }
 
 .header-title {
@@ -50,6 +50,10 @@
   background-color: rgba(0, 0, 0, 0.6);
   padding: 19px;
 }
+.menu-icon-container{
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 51px;
+}
 
 
 @media (max-width: 768px) {
@@ -68,5 +72,27 @@
   .name-container {
     display: flex; /* Muestra el contenedor del nombre y título */
   }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: unset;
+    height: auto;
+    
+  }
+  .header-content{
+    flex-direction: unset;
+    align-items: start;
+  }
+
+  .name-container {
+    display: flex; 
+    font-size: 10px;
+  }
+  .user-icon {
+    background-color: #0009;
+    height: 49px;
+    padding: 19px;
+}
 }
 
