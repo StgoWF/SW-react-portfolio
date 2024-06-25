@@ -93,8 +93,8 @@ const projects = [
   image: 'https://images.unsplash.com/photo-1542831371-d531d36971e6', 
   title: 'E-commerce Backend',
   tech: 'Node.js, Express.js, Sequelize, MySQL',
-  link: 'https://drive.google.com/file/d/1qcX8DdugZzkWMtdybJxw0fK1mXMdqBvc/view', 
-  repo: 'https://github.com/StgoWF/ecommerce-backend-express-sequelize',
+  link: 'https://drive.google.com/file/d/1wcfjGP_Cmv1PdqWrsv65yGUz7A0smV7S/view', 
+  repo: 'https://github.com/StgoWF/ecommerce-backend-sequelize-expresss',
   description: 'This project is the backend for an e-commerce site. It uses Express.js API with Sequelize to interact with a MySQL database. The backend supports all CRUD operations for managing products, categories, and tags.',
   },
   {
