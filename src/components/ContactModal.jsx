@@ -63,7 +63,6 @@ const ContactModal = ({ isOpen, onClose }) => {
   return isOpen ? (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button onClick={onClose} className="close-button">X</button>
         <h2>Contact</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -102,6 +101,7 @@ const ContactModal = ({ isOpen, onClose }) => {
             {errors.message && <p className="error">{errors.message}</p>}
           </div>
           <button type="submit">Submit</button>
+          <button onClick={onClose} className="close">Close</button>
         </form>
         {modalMessage && <p>{modalMessage}</p>}
       </div>
