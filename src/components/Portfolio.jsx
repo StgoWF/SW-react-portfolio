@@ -138,7 +138,14 @@ const projects = [
     repo: 'https://github.com/StgoWF/SW-react-portfolio',
     description: 'This is a portfolio website built using React. It showcases my web development projects and skills, with a focus on creating a responsive and dynamic user interface.'
   },
-
+  {
+    "image": "../assets/images/book-search-engine.png",
+    "title": "Book Search Engine",
+    "tech": "React, GraphQL, Apollo Server, MongoDB, Node.js, Express.js",
+    "link": "https://book-search-graphql-svk3.onrender.com/",
+    "repo": "https://github.com/StgoWF/book-search-graphql",
+    "description": "This is a book search engine built using the MERN stack and refactored to use a GraphQL API with Apollo Server. It allows users to search for books using the Google Books API and save their favorite books to a personal account."
+  }
 
 
 ];
