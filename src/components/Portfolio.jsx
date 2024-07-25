@@ -145,7 +145,16 @@ const projects = [
     "link": "https://book-search-graphql-svk3.onrender.com/",
     "repo": "https://github.com/StgoWF/book-search-graphql",
     "description": "This is a book search engine built using the MERN stack and refactored to use a GraphQL API with Apollo Server. It allows users to search for books using the Google Books API and save their favorite books to a personal account."
+  },
+  {
+    image: '../assets/images/FlyPath.png', // Make sure to have a representative image of the project
+    title: 'FlyPath',
+    tech: 'React.js, Apollo Client, CSS Modules, Node.js, Express.js, GraphQL, MongoDB, Stripe',
+    link: 'https://flypath-1c59fc52be15.herokuapp.com/', // Replace with the deployed URL if different
+    repo: 'https://github.com/StgoWF/FlyPath',
+    description: 'FlyPath is a user-friendly flight search engine that helps users find and compare flights quickly and easily. We provide essential flight details to enable informed travel decisions.'
   }
+  
 
 
 ];
